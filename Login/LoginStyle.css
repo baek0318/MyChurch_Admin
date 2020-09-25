@@ -1,0 +1,112 @@
+body {
+    font-family: "Apple SD Gothic Neo";
+    background: url("../Assets/loginImage@2x.png") no-repeat;
+    background-size: 895px;
+}
+
+.loginContainer {
+    position: absolute;
+    top: 149px;
+    right: 135px;
+    width: 600px;
+    height: 640px;
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.inputText {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 440px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #E2E2E2;
+
+}
+
+.inputText i {
+    position: relative;
+    left: 30px;
+    text-align: center;
+}
+
+.inputText input{
+    width: 300px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    padding: 15px 50px 0 20px;
+    font-size: 25px;
+    background-color: #E2E2E2;
+
+}
+
+.loginButton input{
+    margin-top: 20px;
+    width: 213px;
+    height: 67px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #54A0E2;
+    color: white;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .loginContainer {
+        width: 400px;
+
+    }
+
+    .inputText {
+        width: 300px;
+        height: 60px;
+    }
+
+    .inputText input{
+        width: 160px;
+    }
+
+    .loginButton {
+
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .loginContainer {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 560px) and (max-height: 800px){
+    .loginContainer {
+        right: 0;
+        top: 0;
+        border-radius: 0;
+        height: 800px;
+        width: 560px;
+    }
+
+    .inputText {
+        width: 300px;
+        height: 60px;
+    }
+
+    .inputText input{
+        width: 160px;
+    }
+
+    .loginButton {
+
+    }
+}
