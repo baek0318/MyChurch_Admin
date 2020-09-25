@@ -82,7 +82,7 @@ h1 {
     font-size: 25px;
     border: none;
     outline: none;
-    background-color: #3690DE;
+    background-color: rgba(0,0,0,0);
 }
 
 @media screen and (max-width: 1380px) {
@@ -132,6 +132,6 @@ h1 {
     }
     .loginButton input{
         font-size: 4vw;
-        background-color: #3690DE;
+        background-color: rgba(0,0,0,0);
     }
 }
