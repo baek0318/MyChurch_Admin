@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Apple SD Gothic Neo";
     background: url("../Assets/loginImage@2x.png") no-repeat;
-    background-size: 895px;
+    background-size: auto;
 }
 
 .loginContainer {
@@ -9,12 +12,20 @@ body {
     top: 149px;
     right: 135px;
     width: 600px;
-    height: 640px;
-    background-color: #F2F2F2;
+    height: 783px;
+    background-color: rgba(248, 248, 248, 0.8);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.loginContainer > img {
+    align-self: self-start;
+    width: 45px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
 h1 {
@@ -30,7 +41,6 @@ h1 {
     height: 60px;
     border-radius: 30px;
     background-color: #E2E2E2;
-
 }
 
 .inputText i {
@@ -47,7 +57,6 @@ h1 {
     padding: 15px 50px 0 20px;
     font-size: 25px;
     background-color: #E2E2E2;
-
 }
 
 .loginButton input{
@@ -62,90 +71,3 @@ h1 {
     font-size: 25px;
 }
 
-@media screen and (max-width: 800px) {
-    .loginContainer {
-        width: 400px;
-
-    }
-
-    .inputText {
-        width: 300px;
-        height: 60px;
-    }
-
-    .inputText input{
-        width: 160px;
-    }
-
-    .loginButton {
-    }
-}
-
-@media screen and (max-width: 560px) {
-    .loginContainer {
-        right: 50px;
-    }
-}
-
-@media screen and (max-width: 560px) and (max-height: 800px){
-    h1 {
-        position: relative;
-        left: 30px;
-        right: 30px;
-    }
-    .loginContainer {
-        right: 0;
-        top: 0;
-        border-radius: 0;
-        height: 800px;
-        width: 560px;
-    }
-
-    .inputText {
-        width: 300px;
-        height: 60px;
-        position: relative;
-        left: 30px;
-        right: 30px;
-    }
-
-    .inputText input{
-        width: 160px;
-    }
-
-    .loginButton {
-        position: relative;
-        left: 30px;
-        right: 30px;
-    }
-}
-
-@media screen and (max-width: 400px) and (max-height: 800px){
-    h1 {
-        position: relative;
-        left: 80px;
-    }
-    .loginContainer {
-        right: 0;
-        top: 0;
-        border-radius: 0;
-        height: 800px;
-        width: 560px;
-    }
-
-    .inputText {
-        width: 300px;
-        height: 60px;
-        position: relative;
-        left: 80px;
-    }
-
-    .inputText input{
-        width: 160px;
-    }
-
-    .loginButton {
-        position: relative;
-        left: 80px;
-    }
-}
