@@ -78,7 +78,6 @@ h1 {
     }
 
     .loginButton {
-
     }
 }
 
@@ -118,7 +117,6 @@ h1 {
         position: relative;
         left: 30px;
         right: 30px;
-        background-color: #54A0E2;
     }
 }
 
@@ -149,6 +147,5 @@ h1 {
     .loginButton {
         position: relative;
         left: 80px;
-        background-color: #54A0E2;
     }
 }
