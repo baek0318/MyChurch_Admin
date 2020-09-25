@@ -63,7 +63,7 @@ h1 {
     background-color: #E2E2E2;
 }
 
-.loginButton input{
+.loginButton {
     margin-top: 20px;
     width: 213px;
     height: 67px;
@@ -71,8 +71,18 @@ h1 {
     border: none;
     outline: none;
     background-color: #3690DE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginButton input{
     color: white;
+    margin-top: 13px;
     font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #3690DE;
 }
 
 @media screen and (max-width: 1380px) {
@@ -115,10 +125,13 @@ h1 {
         padding-left: 30px;
     }
 
-    .loginButton input{
+    .loginButton {
         width: 45vw;
         height: 5vh;
-        font-size: 3vw;
+        background-color: #3690DE;
+    }
+    .loginButton input{
+        font-size: 4vw;
         background-color: #3690DE;
     }
 }
