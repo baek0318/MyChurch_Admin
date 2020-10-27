@@ -1,19 +1,88 @@
+body {
+    margin: 0;
+}
 #wrap {
-
+    box-sizing: border-box;
 }
 
 #header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    justify-content: space-between;
+}
 
+#header > .nav-title i {
+    display: inline-block;
+    font-size: 25px;
+    padding: 8px 20px;
+    color: #63A6E0;
+}
+
+#header > .nav-title h1 {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0;
+    padding: 8px 0;
+    color: #63A6E0;
+}
+
+#header > .nav-setting{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    align-items: center;
+}
+
+#header > .nav-setting li{
+    padding: 8px 12px;
+}
+
+#header > .nav-setting li .fa-user{
+    background-color: gainsboro;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+#header > .nav-setting li .fa-cog{
+    font-size: 20px;
+}
+
+#main {
+    display: flex;
 }
 
 #nav {
+    background-color: #63A6E0;
+    width: 15vw;
+    height: 100vh;
+}
 
+#nav .nav-side {
+    list-style: none;
+    margin: 50px 0;
+    padding-left: 0;
+}
+
+#nav .nav-side li{
+    color: white;
+    padding: 30px 30px;
+}
+
+#nav .nav-side li:hover{
+    background-color: #2D8ADB;
+}
+
+#nav .nav-side li a{
+    color: white;
+    list-style: none;
+    font-size: 23px;
+    text-decoration: none;
 }
 
 #container {
-
-}
-
-#footer {
-
+    background-color: #EFEFEF;
+    width: 85vw;
+    height: 100vh;
 }

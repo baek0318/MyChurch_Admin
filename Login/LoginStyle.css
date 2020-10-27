@@ -1,137 +1,95 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
 }
+
 body {
-    font-family: "Apple SD Gothic Neo";
-    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-image: url("../Assets/background.png") ;
-    background-position: center;
-    background-size: cover;
+    justify-content: center;
 }
 
 .loginContainer {
-    position: absolute;
-    top: 149px;
-    right: 110px;
-    width: 600px;
-    bottom: 130px;
-    background-color: rgba(248, 248, 248, 0.8);
-    border-radius: 30px;
+    width: 566px;
+    height: 734px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F8F8F8;
+    border-radius: 30px;
 }
 
 .loginContainer > img {
-    align-self: self-start;
-    width: 45px;
-    height: 50px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-
-h1 {
-    margin-top: 100px;
-    font-size: 50px;
-    margin-bottom: 85px;
-}
-
-.inputText {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 460px;
+    width: 56px;
     height: 60px;
-    border-radius: 30px;
-    background-color: #E2E2E2;
-}
-
-.inputText i {
+    align-self: flex-start;
     position: relative;
-    left: 30px;
-    text-align: center;
+    left: 15px;
+    top: 15px;
 }
 
-.inputText input{
-    width: 300px;
-    border: none;
-    outline: none;
-    margin-left: 20px;
-    padding: 15px 20px 0 20px;
-    font-size: 25px;
-    background-color: #E2E2E2;
+.loginContainer > h1 {
+    margin: 100px 0 30px 0;
+    font-size: 2em;
 }
 
-.loginButton {
-    margin-top: 20px;
-    width: 213px;
-    height: 67px;
+.loginContainer > .inputText {
+    margin: 40px 0;
+    width: 70%;
+    background-color: #F2F2F2;
+    padding: 20px 20px;
     border-radius: 30px;
+}
+
+.loginContainer > .inputText > input {
+    width: 90%;
+    font-size: 17px;
+    margin: 0 2px;
+    background-color: rgba(0,0,0,0);
     border: none;
-    outline: none;
+}
+
+.loginContainer > .loginButton {
+    margin: 30px 0;
+    width: 40%;
     background-color: #3690DE;
+    padding: 15px 35px;
+    border-radius: 30px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.loginButton input{
-    color: white;
-    margin-top: 13px;
-    font-size: 25px;
-    border: none;
-    outline: none;
+.loginContainer > .loginButton > input {
     background-color: rgba(0,0,0,0);
+    font-size: 18px;
+    color: white;
+    border: none;
 }
 
-@media screen and (max-width: 1380px) {
-    body {
-        background-image: none;
-        background-color: #FFFFFF;
-    }
-
-    h1 {
-        margin-top: 1.2em;
-        margin-bottom: 1.2em;
-        font-size: 8vw;
-    }
-
+@media screen and (max-width: 480px) {
     .loginContainer {
         width: 100vw;
         height: 100vh;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        background-color: white;
         border-radius: 0;
     }
-    .loginContainer > img {
-        margin-left: 1.2em;
-        margin-top: 1.2em;
+    .loginContainer > .inputText {
+        width: 90%;
     }
+}
 
-    .inputText {
-        width: 75vw;
-        height: 6vh;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
+@media screen and (max-width: 340px) {
+    .loginContainer > h1 {
+        margin: 70px 0 10px 0;
+        font-size: 2em;
     }
-
-    .inputText input {
-        width: 60vw;
-        height: 6vh;
-        font-size: 3vw;
-        padding-top: 5px;
-        padding-left: 30px;
+    .loginContainer > .inputText {
+        margin: 30px 0;
     }
-
-    .loginButton {
-        width: 45vw;
-        height: 5vh;
-        background-color: #3690DE;
-    }
-    .loginButton input{
-        font-size: 4vw;
-        background-color: rgba(0,0,0,0);
+    .loginContainer > .loginButton {
+        margin: 20px 0;
     }
 }
