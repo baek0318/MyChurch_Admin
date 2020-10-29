@@ -1,19 +1,16 @@
-const id = document.getElementById('id').value;
-
-const pwd = document.querySelector("#pwd");
-
+const id = document.getElementById("id");
+const pwd = document.getElementById("pwd");
 const login = document.querySelector("#login");
 
-function handleLoginEvent(){
-    console.log(id);
-    if(id === "baek"){
-        console.log("일치합니다");
+function handleLoginEvent(event){
+    
+    if(id.value === "baek" && pwd.value == "0318"){
+        window.location.replace("Main/AdminPage.html")
     }
     else{
-        console.log("틀렸습니다");
+        window.alert("일치하지 않습니다");
     }
+
 }
 
 login.addEventListener("click", handleLoginEvent);
-
-
