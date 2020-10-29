@@ -1,0 +1,23 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FirebaseConfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baek0318/MyChurch_Admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baek0318/MyChurch_Admin/issues"
+  },
+  "homepage": "https://github.com/baek0318/MyChurch_Admin#readme",
+  "devDependencies": {
+    "jest": "^26.6.1"
+  }
+}
