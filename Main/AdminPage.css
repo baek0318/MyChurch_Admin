@@ -67,10 +67,6 @@ body {
     line-height: 80px;
 }
 
-#nav ul li:hover {
-    
-}
-
 #nav ul li a{
     color: white;
     text-decoration: none;
@@ -100,18 +96,47 @@ body {
         opacity: 1;
     }
 
-    #container {
-        left: 0;
+    #nav {
+        left: -250px;
         transition: left 0.4s ease;
     }
 
-    #container.active {
-        left: 250px;
+    #nav.active {
+        left: 0;
     }
+
+    #container {
+        position: absolute;
+        left: 0;
+        
+    }
+
 }
 
 @media screen and (max-width: 600px) {
     #header {
         flex-direction: column;
+        justify-content: left;
+    }
+
+    #nav {
+        left: -100%;
+        width: 100%;
+        transition: left 0.4s ease;
+    }
+
+    #nav.active {
+        left: 0;
+    }
+
+    #nav ul li a{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #container {
+        position: absolute;
+        left: 0;
+
     }
 }
