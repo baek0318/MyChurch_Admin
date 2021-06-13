@@ -13,12 +13,10 @@ import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
-import { Editor, EditorState } from "draft-js";
-import "draft-js/dist/Draft.css";
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import EditorForm from "./EditorForm";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -108,80 +106,6 @@ function SermonEnroll() {
     );
 }
 
-function SermonEditor(props) {
-    const { children, value, index, ...other } = props;
-    const [editorState, setEditorState] = useState(() =>
-        EditorState.createEmpty()
-    );
-
-    const editor = React.useRef(null);
-    function focusEditor() {
-        editor.current.focus();
-    }
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-            style={{ border: "1px solid black", minHeight: "6em", cursor: "text" }}
-            onClick={focusEditor}
-        >
-            <Editor
-                ref={editor}
-                editorState={editorState}
-                onChange={setEditorState}
-                placeholder="설교를 입력해주세요"
-            />
-        </div>
-    );
-}
-
-function SermonSequenceEditor(props) {
-    const { children, value, index, ...other } = props;
-    const [editorState, setEditorState] = useState(() =>
-        EditorState.createEmpty()
-    );
-
-    const editor = useRef(null);
-    function focusEditor() {
-        editor.current.focus();
-    }
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-            style={{ border: "1px solid black", minHeight: "6em", cursor: "text" }}
-            onClick={focusEditor}
-        >
-            <Editor
-                ref={editor}
-                editorState={editorState}
-                onChange={setEditorState}
-                placeholder="예배 순서를 작성해주세요"
-            />
-        </div>
-    );
-}
-
-SermonEditor.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
-};
-
-SermonSequenceEditor.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
-};
-
 function a11yProps(index) {
     return {
         id: `simple-tab-${index}`,
@@ -205,8 +129,8 @@ function SimpleTabs() {
                     <Tab label="예배 순서" {...a11yProps(1)} />
                 </Tabs>
             </AppBar>
-            <SermonEditor value={value} index={0} />
-            <SermonSequenceEditor value={value} index={1} />
+            <EditorForm value={value} index={0} />
+            <EditorForm value={value} index={1} />
         </div>
     );
 }
